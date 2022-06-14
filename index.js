@@ -8,13 +8,13 @@ const main = async () => {
         const installationId = core.getInput('installationId', { required: true });
         const privateKey = core.getInput('privateKey', { required: true });
     
-        const { token } = await getToken({
+        const objToken = await getToken({
             appId: appId,
             installationId: installationId, 
             privateKey: privateKey,
         });
     
-        return token;
+        return { access_token: objToken.token, installation_id: objToken.installationId };
     } catch (err) {
         core.setFailed(err.message);
     }

@@ -25229,13 +25229,13 @@ const main = async () => {
         const installationId = core.getInput('installationId', { required: true });
         const privateKey = core.getInput('privateKey', { required: true });
     
-        const { token } = await (0,github_app_installation_token__WEBPACK_IMPORTED_MODULE_0__.getToken)({
+        const objToken = await (0,github_app_installation_token__WEBPACK_IMPORTED_MODULE_0__.getToken)({
             appId: appId,
             installationId: installationId, 
             privateKey: privateKey,
         });
     
-        return token;
+        return { access_token: objToken.token, installation_id: objToken.installationId };
     } catch (err) {
         core.setFailed(err.message);
     }
