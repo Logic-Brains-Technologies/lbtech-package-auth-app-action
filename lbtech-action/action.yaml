@@ -1,0 +1,15 @@
+name: 'Logic Brains Auth Package App'
+description: 'Allow getting a token authorize for publish or install package from github'
+inputs:
+  appId:
+    description: 'The GitHub App ID'
+    required: true
+  installationId:
+    description: 'The GitHub Installation ID'
+    required: true
+  privateKey:
+    description: 'The Private Key from GitHub App'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'

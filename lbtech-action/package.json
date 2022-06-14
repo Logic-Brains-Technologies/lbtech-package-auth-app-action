@@ -1,0 +1,23 @@
+{
+  "name": "lbtech-package-auth-action",
+  "version": "1.0.0",
+  "description": "Allow getting a token authorize for publish or install package from github",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Logic-Brains-Technologies/lbtech-package-auth-app-action.git"
+  },
+  "keywords": [],
+  "author": "Logic Brains Technologies",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Logic-Brains-Technologies/lbtech-package-auth-app-action/issues"
+  },
+  "homepage": "https://github.com/Logic-Brains-Technologies/lbtech-package-auth-app-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.8.2"
+  }
+}
