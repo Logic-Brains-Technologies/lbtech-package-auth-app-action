@@ -25235,7 +25235,8 @@ const main = async () => {
             privateKey: privateKey,
         });
     
-        return { access_token: objToken.token, installation_id: objToken.installationId };
+        core.setOutput('response', JSON.stringify({ access_token: objToken.token, installation_id: objToken.installationId }));
+        
     } catch (err) {
         core.setFailed(err.message);
     }
