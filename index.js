@@ -14,8 +14,8 @@ const main = async () => {
             privateKey: privateKey,
         });
     
-        core.setOutput('response', JSON.stringify({ access_token: objToken.token, installation_id: objToken.installationId }));
-        
+        core.setOutput('app_token', objToken.token);
+
     } catch (err) {
         core.setFailed(err.message);
     }
