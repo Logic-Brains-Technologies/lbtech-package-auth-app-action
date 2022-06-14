@@ -1,5 +1,6 @@
 import { getToken } from 'github-app-installation-token';
-import { core } from '@actions/core';
+
+const core = require('@actions/core');
 
 const main = async () => {
     try {
