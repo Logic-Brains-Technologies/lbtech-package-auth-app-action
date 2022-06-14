@@ -25219,16 +25219,15 @@ var __webpack_exports__ = {};
 __nccwpck_require__.r(__webpack_exports__);
 /* harmony import */ var github_app_installation_token__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(904);
 /* harmony import */ var github_app_installation_token__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nccwpck_require__.n(github_app_installation_token__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _actions_core__WEBPACK_IMPORTED_MODULE_1__ = __nccwpck_require__(307);
-/* harmony import */ var _actions_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__nccwpck_require__.n(_actions_core__WEBPACK_IMPORTED_MODULE_1__);
 
 
+const core = __nccwpck_require__(307);
 
 const main = async () => {
     try {
-        const appId = _actions_core__WEBPACK_IMPORTED_MODULE_1__.core.getInput('appId', { required: true });
-        const installationId = _actions_core__WEBPACK_IMPORTED_MODULE_1__.core.getInput('installationId', { required: true });
-        const privateKey = _actions_core__WEBPACK_IMPORTED_MODULE_1__.core.getInput('privateKey', { required: true });
+        const appId = core.getInput('appId', { required: true });
+        const installationId = core.getInput('installationId', { required: true });
+        const privateKey = core.getInput('privateKey', { required: true });
     
         const { token } = await (0,github_app_installation_token__WEBPACK_IMPORTED_MODULE_0__.getToken)({
             appId: appId,
@@ -25238,7 +25237,7 @@ const main = async () => {
     
         return token;
     } catch (err) {
-        _actions_core__WEBPACK_IMPORTED_MODULE_1__.core.setFailed(err.message);
+        core.setFailed(err.message);
     }
 };
 
